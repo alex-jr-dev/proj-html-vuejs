@@ -1,13 +1,32 @@
 $font_family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+
 $spacing: 20px;
+$font_size: 14px;
+
 $primary_color: #f8f8f8;
 $secondary_color: #ffa837;
 $third_color: #0369d7;
 $hover_third_color: #351ba2;
 $hover_scondary_color: #eca447;
-$font_size: 14px;
+$panel_background_color: #1a236c;
+$first_background_color: #051745;
 
 @import "../src/partials/commons";
+
+.button {
+  color: $primary_color;
+  padding: ($spacing / 2) $spacing;
+  background-color: $secondary_color;
+  border-radius: 20px;
+  font-size: $font_size - 4px;
+  border: none;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $hover_scondary_color;
+  }
+}
 
 header {
   background-image: url("../images/1-hero-image.png");
@@ -48,21 +67,6 @@ header {
             color: $hover_scondary_color;
           }
         }
-
-        button {
-          color: $primary_color;
-          padding: ($spacing / 2) $spacing;
-          background-color: $secondary_color;
-          border-radius: 20px;
-          font-size: $font_size - 4px;
-          border: none;
-          text-transform: uppercase;
-
-          &:hover {
-            cursor: pointer;
-            background-color: $hover_scondary_color;
-          }
-        }
       }
     }
   }
@@ -80,19 +84,13 @@ header {
 
       p {
         padding: ($spacing / 2) 0;
+        padding-bottom: $spacing;
         width: 80%;
         font-weight: lighter;
       }
 
-      button {
+      .button {
         margin: $spacing / 2 0;
-        color: $primary_color;
-        padding: ($spacing / 2) $spacing;
-        background-color: $secondary_color;
-        border-radius: 20px;
-        font-size: $font_size - 4px;
-        border: none;
-        text-transform: uppercase;
 
         &:hover {
           cursor: pointer;
@@ -111,6 +109,108 @@ header {
             cursor: pointer;
           }
         }
+      }
+    }
+  }
+}
+
+.template {
+  color: black;
+  text-align: center;
+  padding-top: $spacing * 3;
+  background-color: $primary_color;
+
+  img {
+    object-fit: contain;
+    width: 70%;
+  }
+}
+
+.wrapper-text {
+  display: flex;
+  justify-content: center;
+  div {
+    width: 50%;
+    h1 {
+      font-size: $font_size * 2;
+      margin-bottom: $spacing;
+    }
+
+    p {
+      font-weight: lighter;
+    }
+  }
+}
+
+.wrapper-panels {
+  display: flex;
+  justify-content: space-around;
+  padding-top: $spacing * 2;
+  div {
+    margin: $spacing / 2;
+    background-color: white;
+    padding: $spacing + ($spacing / 2);
+
+    i {
+      color: $hover_scondary_color;
+      margin-bottom: $spacing / 2;
+      font-size: $font_size * 2;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: $font_size + 8px;
+      margin-bottom: $spacing / 2;
+    }
+
+    p {
+      font-weight: lighter;
+    }
+  }
+}
+
+.services {
+  background-color: $first_background_color;
+  background-image: url(../images/pattern_background.png);
+  background-size: 100%;
+  padding: $spacing * 3 0;
+  text-align: center;
+
+  .wrapper-panels {
+    div {
+      background-color: $panel_background_color;
+
+      i {
+        margin-bottom: $spacing + 6px;
+      }
+
+      p {
+        margin-bottom: $spacing / 2;
+      }
+
+      a {
+        text-decoration: none;
+        color: $hover_scondary_color;
+      }
+    }
+  }
+}
+
+.work {
+  padding: $spacing * 3 0;
+  text-align: center;
+  color: black;
+
+  .wrapper-image {
+    margin: $spacing * 2 0;
+    display: flex;
+    justify-content: center;
+    div {
+      flex-basis: 250px;
+      margin: 0 $spacing - 15px;
+      img {
+        width: 100%;
+        margin-bottom: $spacing - 15px;
       }
     }
   }
