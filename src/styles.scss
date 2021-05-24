@@ -26,6 +26,7 @@ $money_light_grey: #818e9d;
   text-transform: uppercase;
 
   &:hover {
+    transition: background-color 0.3s;
     cursor: pointer;
     background-color: $hover_scondary_color;
   }
@@ -55,6 +56,11 @@ header {
           text-decoration: none;
           color: $primary_color;
           padding: ($spacing / 2) 0;
+
+          &:hover {
+            transition: color 0.3s;
+            color: $secondary_color;
+          }
         }
 
         span {
@@ -66,6 +72,7 @@ header {
           font-size: $font_size - 2px;
 
           &:hover {
+            transition: color 0.3s;
             cursor: pointer;
             color: $hover_scondary_color;
           }
@@ -155,7 +162,7 @@ header {
     padding: $spacing + ($spacing / 2);
 
     i {
-      color: $hover_scondary_color;
+      color: $secondary_color;
       margin-bottom: $spacing / 2;
       font-size: $font_size * 2;
     }
@@ -193,7 +200,12 @@ header {
 
       a {
         text-decoration: none;
-        color: $hover_scondary_color;
+        color: $secondary_color;
+
+        &:hover {
+          transition: color 0.3s;
+          color: $hover_scondary_color;
+        }
       }
     }
   }
@@ -434,6 +446,70 @@ header {
     div {
       p {
         margin-bottom: $spacing;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: $spacing * 2 0;
+  text-align: center;
+
+  .wrapper-footer {
+    display: flex;
+    justify-content: center;
+    div {
+      img {
+        width: 120px;
+        margin-bottom: $spacing + 10px;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        margin-bottom: $spacing + 10px;
+
+        li {
+          padding: 0 $spacing / 2;
+          a {
+            color: $money_dark_grey;
+            text-decoration: none;
+
+            &:hover {
+              color: $secondary_color;
+            }
+          }
+        }
+      }
+
+      p {
+        color: $money_light_grey;
+        font-size: $font_size - 2px;
+        margin-bottom: $spacing;
+
+        i {
+          color: $money_light_grey;
+          font-size: $font_size - 5px;
+          margin-right: 0;
+        }
+
+        span {
+          color: black;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      i {
+        color: $money_dark_grey;
+        font-size: $font_size + 2px;
+        margin-right: $spacing - 8px;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
