@@ -1,0 +1,117 @@
+$font_family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+$spacing: 20px;
+$primary_color: #f8f8f8;
+$secondary_color: #ffa837;
+$third_color: #0369d7;
+$hover_third_color: #351ba2;
+$hover_scondary_color: #eca447;
+$font_size: 14px;
+
+@import "../src/partials/commons";
+
+header {
+  background-image: url("../images/1-hero-image.png");
+  padding: $spacing 0;
+  background-size: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 120px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        padding: $spacing / 2;
+
+        a {
+          text-decoration: none;
+          color: $primary_color;
+          padding: ($spacing / 2) 0;
+        }
+
+        span {
+          border: 1px solid $secondary_color;
+          padding: ($spacing / 10) ($spacing / 2);
+          border-radius: 5px;
+          color: $secondary_color;
+          text-transform: uppercase;
+          font-size: $font_size - 2px;
+
+          &:hover {
+            cursor: pointer;
+            color: $hover_scondary_color;
+          }
+        }
+
+        button {
+          color: $primary_color;
+          padding: ($spacing / 2) $spacing;
+          background-color: $secondary_color;
+          border-radius: 20px;
+          font-size: $font_size - 4px;
+          border: none;
+          text-transform: uppercase;
+
+          &:hover {
+            cursor: pointer;
+            background-color: $hover_scondary_color;
+          }
+        }
+      }
+    }
+  }
+
+  .campaigns {
+    padding: ($spacing * 5) 0;
+    div {
+      width: 50%;
+
+      h1 {
+        font-size: $font_size * 3;
+        font-weight: bold;
+        padding: ($spacing / 2) 0;
+      }
+
+      p {
+        padding: ($spacing / 2) 0;
+        width: 80%;
+        font-weight: lighter;
+      }
+
+      button {
+        margin: $spacing / 2 0;
+        color: $primary_color;
+        padding: ($spacing / 2) $spacing;
+        background-color: $secondary_color;
+        border-radius: 20px;
+        font-size: $font_size - 4px;
+        border: none;
+        text-transform: uppercase;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $hover_scondary_color;
+        }
+
+        &:first-of-type {
+          margin-right: $spacing - 12px;
+        }
+
+        &:last-of-type {
+          background-color: $third_color;
+
+          &:hover {
+            background-color: $hover_third_color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
