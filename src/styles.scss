@@ -515,4 +515,15 @@ header {
       }
     }
   }
+
+  .chevron {
+    background-color: $money_dark_grey;
+    position: relative;
+    bottom: -45px;
+    left: 600px;
+    padding: ($spacing / 5) ($spacing - 7px);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+  }
 }

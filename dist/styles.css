@@ -435,3 +435,13 @@ header .campaigns div .button:last-of-type:hover {
 .footer .wrapper-footer div i:hover {
   cursor: pointer;
 }
+.footer .chevron {
+  background-color: #5a5759;
+  position: relative;
+  bottom: -45px;
+  left: 600px;
+  padding: 4px 13px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+}
