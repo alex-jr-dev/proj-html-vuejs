@@ -67,6 +67,7 @@ header .header ul li span {
   color: #ffa837;
   text-transform: uppercase;
   font-size: 12px;
+  margin-left: 4px;
 }
 header .header ul li span:hover {
   transition: color 0.3s;
@@ -407,6 +408,7 @@ header .campaigns div .button:last-of-type:hover {
   text-decoration: none;
 }
 .footer .wrapper-footer div ul li a:hover {
+  transition: color 0.3s;
   color: #ffa837;
 }
 .footer .wrapper-footer div p {
