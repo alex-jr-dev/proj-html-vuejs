@@ -31,6 +31,45 @@ body {
   background-color: #eca447;
 }
 
+.wrapper-text {
+  display: flex;
+  justify-content: center;
+}
+.wrapper-text div {
+  width: 50%;
+}
+.wrapper-text div h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.wrapper-text div p {
+  font-weight: lighter;
+}
+
+.wrapper-panels {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+}
+.wrapper-panels div {
+  margin: 10px;
+  background-color: white;
+  padding: 30px;
+}
+.wrapper-panels div i {
+  color: #ffa837;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+.wrapper-panels div h3 {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.wrapper-panels div p {
+  font-weight: lighter;
+}
+
 header {
   background-image: url(/images/1-hero-image.png?d4d0f3c2bcf674354ad6d8070ba39946);
   padding: 20px 0;
@@ -47,9 +86,10 @@ header .header img {
 header .header ul {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 header .header ul li {
-  padding: 10px;
+  padding: 0 10px;
 }
 header .header ul li a {
   text-decoration: none;
@@ -114,50 +154,13 @@ header .campaigns div .button:last-of-type:hover {
   text-align: center;
   padding-top: 60px;
   background-color: #f8f8f8;
+  overflow: hidden;
 }
 .template img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 70%;
-}
-
-.wrapper-text {
-  display: flex;
-  justify-content: center;
-}
-.wrapper-text div {
-  width: 50%;
-}
-.wrapper-text div h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-.wrapper-text div p {
-  font-weight: lighter;
-}
-
-.wrapper-panels {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 40px;
-}
-.wrapper-panels div {
-  margin: 10px;
-  background-color: white;
-  padding: 30px;
-}
-.wrapper-panels div i {
-  color: #ffa837;
-  margin-bottom: 10px;
-  font-size: 28px;
-}
-.wrapper-panels div h3 {
-  font-weight: bold;
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-.wrapper-panels div p {
-  font-weight: lighter;
+  margin-bottom: -5px;
 }
 
 .services {
@@ -438,7 +441,7 @@ header .campaigns div .button:last-of-type:hover {
 .footer .chevron {
   background-color: #5a5759;
   position: relative;
-  bottom: -45px;
+  bottom: -36px;
   left: 600px;
   padding: 4px 13px;
   border-top-left-radius: 5px;

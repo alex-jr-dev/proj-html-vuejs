@@ -1,0 +1,43 @@
+.news {
+  padding: $spacing * 3 0;
+  text-align: center;
+  color: black;
+  background-color: $primary_color;
+
+  .wrapper-text {
+    p {
+      margin-bottom: $spacing * 2;
+    }
+  }
+
+  .wrapper-news {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: $spacing * 2;
+
+    div {
+      margin: $spacing - 8px;
+
+      img {
+        width: 300px;
+        margin-bottom: $spacing / 4;
+      }
+
+      p {
+        font-weight: lighter;
+      }
+
+      h3 {
+        color: $secondary_color;
+        margin-bottom: $spacing / 4;
+      }
+
+      p {
+        &:first-of-type {
+          font-size: $font_size - 4px;
+          margin-bottom: $spacing / 3;
+        }
+      }
+    }
+  }
+}

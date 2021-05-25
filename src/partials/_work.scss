@@ -1,0 +1,19 @@
+.work {
+  padding: $spacing * 3 0;
+  text-align: center;
+  color: black;
+
+  .wrapper-image {
+    margin: $spacing * 2 0;
+    display: flex;
+    justify-content: center;
+    div {
+      flex-basis: 250px;
+      margin: 0 $spacing - 15px;
+      img {
+        width: 100%;
+        margin-bottom: $spacing - 15px;
+      }
+    }
+  }
+}

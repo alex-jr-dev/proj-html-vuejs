@@ -1,0 +1,13 @@
+.template {
+  color: black;
+  text-align: center;
+  padding-top: $spacing * 3;
+  background-color: $primary_color;
+  overflow: hidden;
+
+  img {
+    object-fit: contain;
+    width: 70%;
+    margin-bottom: -5px;
+  }
+}

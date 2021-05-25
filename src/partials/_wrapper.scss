@@ -1,0 +1,42 @@
+.wrapper-text {
+  display: flex;
+  justify-content: center;
+  div {
+    width: 50%;
+    h1 {
+      font-size: $font_size * 2;
+      margin-bottom: $spacing;
+    }
+
+    p {
+      font-weight: lighter;
+    }
+  }
+}
+
+.wrapper-panels {
+  display: flex;
+  justify-content: space-around;
+  padding-top: $spacing * 2;
+  div {
+    margin: $spacing / 2;
+    background-color: white;
+    padding: $spacing + ($spacing / 2);
+
+    i {
+      color: $secondary_color;
+      margin-bottom: $spacing / 2;
+      font-size: $font_size * 2;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: $font_size + 8px;
+      margin-bottom: $spacing / 2;
+    }
+
+    p {
+      font-weight: lighter;
+    }
+  }
+}

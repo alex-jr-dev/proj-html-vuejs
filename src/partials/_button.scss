@@ -1,0 +1,15 @@
+.button {
+  color: $primary_color;
+  padding: ($spacing / 2) $spacing;
+  background-color: $secondary_color;
+  border-radius: 20px;
+  font-size: $font_size - 4px;
+  border: none;
+  text-transform: uppercase;
+
+  &:hover {
+    transition: background-color 0.3s;
+    cursor: pointer;
+    background-color: $hover_scondary_color;
+  }
+}

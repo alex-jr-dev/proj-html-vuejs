@@ -1,0 +1,93 @@
+header {
+  background-image: url("../../images/1-hero-image.png");
+  padding: $spacing 0;
+  background-size: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 120px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      li {
+        padding: 0 $spacing / 2;
+
+        a {
+          text-decoration: none;
+          color: $primary_color;
+          padding: ($spacing / 2) 0;
+
+          &:hover {
+            transition: color 0.3s;
+            color: $secondary_color;
+          }
+        }
+
+        span {
+          border: 1px solid $secondary_color;
+          padding: ($spacing / 10) ($spacing / 2);
+          border-radius: 5px;
+          color: $secondary_color;
+          text-transform: uppercase;
+          font-size: $font_size - 2px;
+          margin-left: $spacing / 5;
+
+          &:hover {
+            transition: color 0.3s;
+            cursor: pointer;
+            color: $hover_scondary_color;
+          }
+        }
+      }
+    }
+  }
+
+  .campaigns {
+    padding: ($spacing * 5) 0;
+    div {
+      width: 50%;
+
+      h1 {
+        font-size: $font_size * 3;
+        font-weight: bold;
+        padding: ($spacing / 2) 0;
+      }
+
+      p {
+        padding: ($spacing / 2) 0;
+        padding-bottom: $spacing;
+        width: 80%;
+        font-weight: lighter;
+      }
+
+      .button {
+        margin: $spacing / 2 0;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $hover_scondary_color;
+        }
+
+        &:first-of-type {
+          margin-right: $spacing - 12px;
+        }
+
+        &:last-of-type {
+          background-color: $third_color;
+
+          &:hover {
+            background-color: $hover_third_color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

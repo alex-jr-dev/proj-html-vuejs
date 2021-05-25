@@ -1,0 +1,83 @@
+.plans {
+  background-image: url(../../images/background1.jpg);
+  background-size: 100%;
+  padding: $spacing * 3 0;
+  text-align: center;
+
+  .wrapper-panels {
+    color: black;
+
+    h1 {
+      margin-bottom: $spacing / 3;
+    }
+
+    div {
+      padding: ($spacing + 10px) (($spacing * 2)+9px);
+      p {
+        padding-bottom: $spacing;
+        color: $money_dark_grey;
+
+        &:first-of-type {
+          padding-top: $spacing / 3;
+        }
+
+        &:last-of-type {
+          padding-bottom: $spacing + 5px;
+        }
+      }
+    }
+
+    .money {
+      position: relative;
+      padding: 0;
+
+      .int,
+      .dollar,
+      .decimal,
+      .time {
+        font-weight: bold;
+      }
+
+      .int {
+        font-size: $font_size * 2.5;
+        color: $third_color;
+      }
+
+      .dollar {
+        position: absolute;
+        top: 7px;
+        left: 20px;
+        color: $money_dark_grey;
+      }
+
+      .decimal {
+        position: absolute;
+        top: 7px;
+        left: 63px;
+        font-size: $font_size - 4px;
+        color: $third_color;
+      }
+
+      .time {
+        position: absolute;
+        bottom: 10px;
+        left: 63px;
+        font-size: $font_size / 2;
+        font-style: italic;
+        color: $money_light_grey;
+      }
+    }
+
+    .button {
+      background-color: white;
+      color: $money_dark_grey;
+      border: 1px solid $money_dark_grey;
+
+      &:hover {
+        background-color: $secondary_color;
+        color: white;
+        border: 1px solid $secondary_color;
+      }
+    }
+  }
+}
