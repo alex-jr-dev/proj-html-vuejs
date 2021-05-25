@@ -324,43 +324,27 @@
             <div class="wrapper-clients">
               <div>
                 <h1>What Our Clients Say</h1>
-                <img src="images/testimonials-2.jpg" alt="Testimonial image" />
+                <img :src="clientsList[activeClient].img" />
+                <p>{{clientsList[activeClient].text}}</p>
                 <p>
-                  Ability proceeds from a fusion of skills, knowledge,
-                  understanding and imagination, consolidated by experience.
+                  {{clientsList[activeClient].name}},
+                  <span> {{clientsList[activeClient].agency}}</span>
                 </p>
-                <p>Luis Desalvo, <span> CREO TECH</span></p>
-                <i class="fas fa-circle"></i>
-                <i class="far fa-circle"></i>
+                <i
+                  class="far fa-circle"
+                  :class="{fas: activeClient === index }"
+                  :data-index="index"
+                  v-for="(img, index) in clientsList"
+                  @click.prevent="onDotClick(index)"
+                ></i>
               </div>
             </div>
             <div class="hr">
               <div></div>
             </div>
             <div class="wrapper-logo">
-              <div>
-                <img
-                  src="images/clients_partner_5-200x202.png"
-                  alt="Avada logo"
-                />
-              </div>
-              <div>
-                <img
-                  src="images/clients_partner_6-200x202.png"
-                  alt="Avada logo"
-                />
-              </div>
-              <div>
-                <img
-                  src="images/clients_partner_1-200x202.png"
-                  alt="Avada logo"
-                />
-              </div>
-              <div>
-                <img
-                  src="images/clients_partner_2-200x202.png"
-                  alt="Avada logo"
-                />
+              <div v-for="image in imagesList">
+                <img :src="image.img" alt="Avada logo" />
               </div>
             </div>
           </div>

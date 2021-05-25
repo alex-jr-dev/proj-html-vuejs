@@ -1,6 +1,7 @@
 new Vue({
   el: "#app",
   data: {
+    show: true,
     headerlinks: [
       {
         text: "Home",
@@ -50,5 +51,40 @@ new Vue({
         text: "Get in touch now",
       },
     ],
+    imagesList: [
+      {
+        img: "images/clients_partner_5-200x202.png",
+      },
+      {
+        img: "images/clients_partner_6-200x202.png",
+      },
+      {
+        img: "images/clients_partner_1-200x202.png",
+      },
+      {
+        img: "images/clients_partner_2-200x202.png",
+      },
+    ],
+    clientsList: [
+      {
+        img: "images/testimonials-2.jpg",
+        text: "Ability proceeds from a fusion of skills, knowledge, understanding and imagination, consolidated by experience.",
+        name: "Luis Desalvo",
+        agency: "CREO TECH",
+      },
+      {
+        img: "images/testimonials-1.jpg",
+        text: "All We love what we do and we do what our clients love & work with great clients all over the world to create thoughtful and purposeful websites.",
+        name: "Amanda De Santa",
+        agency: "LIFE INVADER",
+      },
+    ],
+    activeClient: 0,
+  },
+
+  methods: {
+    onDotClick(clickedIndex) {
+      this.activeClient = clickedIndex;
+    },
   },
 });
