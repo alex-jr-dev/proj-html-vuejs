@@ -11,9 +11,10 @@
       margin-bottom: $spacing / 3;
     }
 
-    div {
+    div:not(.money) {
       padding: ($spacing + 10px) (($spacing * 2)+9px);
       transition: transform 0.6s;
+      cursor: pointer;
 
       &:hover {
         transition: transform 0.6s;

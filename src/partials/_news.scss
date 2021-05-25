@@ -17,6 +17,15 @@
 
     div {
       margin: $spacing - 8px;
+      cursor: pointer;
+      transition: box-shadow 0.6s, transform 0.6s;
+
+      &:hover {
+        transform: translateY(-20px);
+        transition: transform 0.6s, box-shadow 0.6s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+      }
 
       img {
         width: 300px;
@@ -25,6 +34,7 @@
 
       p {
         font-weight: lighter;
+        margin-bottom: $spacing;
       }
 
       h3 {

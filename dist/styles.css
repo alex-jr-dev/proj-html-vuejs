@@ -8,6 +8,7 @@ body {
   font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   color: #f8f8f8;
   font-size: 14px;
+  cursor: default;
 }
 
 .container {
@@ -165,12 +166,16 @@ header .campaigns div .button:last-of-type:hover {
 .template .wrapper-panels {
   height: 270px;
 }
+.template .wrapper-panels div {
+  transition: box-shadow 0.6s;
+}
 .template .wrapper-panels div i {
   transition: font-size 0.6s;
 }
 .template .wrapper-panels div:hover {
   transition: box-shadow 0.6s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 .template .wrapper-panels div:hover i {
   transition: font-size 0.6s;
@@ -260,22 +265,23 @@ header .campaigns div .button:last-of-type:hover {
 .plans .wrapper-panels h1 {
   margin-bottom: 6.6666666667px;
 }
-.plans .wrapper-panels div {
+.plans .wrapper-panels div:not(.money) {
   padding: 30px 49px;
   transition: transform 0.6s;
+  cursor: pointer;
 }
-.plans .wrapper-panels div:hover {
+.plans .wrapper-panels div:not(.money):hover {
   transition: transform 0.6s;
   transform: perspective(600px) translateZ(60px);
 }
-.plans .wrapper-panels div p {
+.plans .wrapper-panels div:not(.money) p {
   padding-bottom: 20px;
   color: #5a5759;
 }
-.plans .wrapper-panels div p:first-of-type {
+.plans .wrapper-panels div:not(.money) p:first-of-type {
   padding-top: 6.6666666667px;
 }
-.plans .wrapper-panels div p:last-of-type {
+.plans .wrapper-panels div:not(.money) p:last-of-type {
   padding-bottom: 25px;
 }
 .plans .wrapper-panels .money {
@@ -340,6 +346,14 @@ header .campaigns div .button:last-of-type:hover {
 }
 .news .wrapper-news div {
   margin: 12px;
+  cursor: pointer;
+  transition: box-shadow 0.6s, transform 0.6s;
+}
+.news .wrapper-news div:hover {
+  transform: translateY(-20px);
+  transition: transform 0.6s, box-shadow 0.6s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 .news .wrapper-news div img {
   width: 300px;
@@ -347,6 +361,7 @@ header .campaigns div .button:last-of-type:hover {
 }
 .news .wrapper-news div p {
   font-weight: lighter;
+  margin-bottom: 20px;
 }
 .news .wrapper-news div h3 {
   color: #ffa837;

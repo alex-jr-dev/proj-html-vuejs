@@ -14,12 +14,14 @@
   .wrapper-panels {
     height: 270px;
     div {
+      transition: box-shadow 0.6s;
       i {
         transition: font-size 0.6s;
       }
       &:hover {
         transition: box-shadow 0.6s;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
         i {
           transition: font-size 0.6s;
           font-size: $font-size * 3;
