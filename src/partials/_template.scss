@@ -10,4 +10,19 @@
     width: 70%;
     margin-bottom: -5px;
   }
+
+  .wrapper-panels {
+    height: 270px;
+    div {
+      i {
+        transition: font-size 0.3s;
+      }
+      &:hover {
+        i {
+          transition: font-size 0.3s;
+          font-size: $font-size * 3;
+        }
+      }
+    }
+  }
 }
