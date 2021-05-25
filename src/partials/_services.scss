@@ -8,6 +8,11 @@
   .wrapper-panels {
     div {
       background-color: $panel_background_color;
+      transition: transform 0.6s;
+      &:hover {
+        transition: transform 0.6s;
+        transform: perspective(600px) translateZ(60px);
+      }
 
       i {
         margin-bottom: $spacing + 6px;
