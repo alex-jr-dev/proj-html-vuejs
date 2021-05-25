@@ -13,6 +13,12 @@
 
     div {
       padding: ($spacing + 10px) (($spacing * 2)+9px);
+      transition: transform 0.6s;
+
+      &:hover {
+        transition: transform 0.6s;
+        transform: perspective(600px) translateZ(60px);
+      }
       p {
         padding-bottom: $spacing;
         color: $money_dark_grey;

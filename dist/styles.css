@@ -258,6 +258,11 @@ header .campaigns div .button:last-of-type:hover {
 }
 .plans .wrapper-panels div {
   padding: 30px 49px;
+  transition: transform 0.6s;
+}
+.plans .wrapper-panels div:hover {
+  transition: transform 0.6s;
+  transform: perspective(600px) translateZ(60px);
 }
 .plans .wrapper-panels div p {
   padding-bottom: 20px;
