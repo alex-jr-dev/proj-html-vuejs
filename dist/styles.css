@@ -213,13 +213,35 @@ header .campaigns div .button:last-of-type:hover {
   display: flex;
   justify-content: center;
 }
-.work .wrapper-image div {
-  flex-basis: 250px;
+.work .wrapper-image .column-image div {
+  width: 250px;
   margin: 0 5px;
+  position: relative;
+  transition: transform 0.6s;
 }
-.work .wrapper-image div img {
+.work .wrapper-image .column-image div:hover {
+  transition: display 0.6s;
+  transition: transform 0.6s;
+  transform: perspective(800px) translateZ(30px);
+  cursor: pointer;
+}
+.work .wrapper-image .column-image div:hover .hover {
+  transition: background-color 0.6s;
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: perspective(1000px);
+}
+.work .wrapper-image .column-image div img {
   width: 100%;
   margin-bottom: 5px;
+}
+.work .wrapper-image .column-image .hover {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: -5px;
+  width: 100%;
+  height: 96%;
+  transition: background-color 0.6s;
 }
 
 .plans {
