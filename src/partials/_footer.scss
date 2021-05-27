@@ -18,9 +18,17 @@
 
         li {
           padding: 0 $spacing / 2;
+          transition: transform 0.3s;
+
+          &:hover {
+            transition: transform 0.3s;
+            transform: perspective(800px) translateZ(60px);
+          }
+
           a {
             color: $money_dark_grey;
             text-decoration: none;
+            transition: color 0.3s;
 
             &:hover {
               transition: color 0.3s;

@@ -25,6 +25,11 @@
         transition: transform 0.6s, box-shadow 0.6s;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         border-radius: 4px;
+
+        &:active {
+          transition: transform 0.3s;
+          transform: perspective(800px) translateZ(-1px);
+        }
       }
 
       img {

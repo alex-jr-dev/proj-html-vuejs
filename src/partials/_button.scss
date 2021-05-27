@@ -6,10 +6,17 @@
   font-size: $font_size - 4px;
   border: none;
   text-transform: uppercase;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 
   &:hover {
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0, 3s;
+    transform: perspective(800px) translateZ(30px);
     cursor: pointer;
     background-color: $hover_scondary_color;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: perspective(800px) translateZ(0);
   }
 }
