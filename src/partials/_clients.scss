@@ -9,6 +9,12 @@
 
     div {
       width: 55%;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+
       h1 {
         font-weight: bold;
         font-size: $font_size * 2;
@@ -70,5 +76,18 @@
         width: 100%;
       }
     }
+  }
+
+  .fade-enter {
+    opacity: 0;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.6s ease-out;
+  }
+
+  .fade-leave-to {
+    opacity: 0;
   }
 }

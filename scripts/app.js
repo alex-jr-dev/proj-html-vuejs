@@ -80,11 +80,37 @@ new Vue({
       },
     ],
     activeClient: 0,
+    interval: 0,
   },
 
   methods: {
     onDotClick(clickedIndex) {
       this.activeClient = clickedIndex;
     },
+    changeClient(direction, changedByAI) {
+      this.activeClient = this.activeClient + direction;
+
+      if (this.activeClient > 1) {
+        this.activeClient = 0;
+      }
+    },
+    play() {
+      clearInterval(this.interval);
+
+      this.interval = setInterval(() => {
+        this.changeClient(+1, true);
+      }, 5000);
+    },
+    pause() {
+      clearInterval(this.interval);
+    },
+  },
+
+  mounted() {
+    const elementoHtml = document.querySelector(".client-slider");
+
+    elementoHtml.focus();
+
+    this.play();
   },
 });

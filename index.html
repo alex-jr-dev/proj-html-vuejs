@@ -322,14 +322,25 @@
         <section class="clients">
           <div class="container">
             <div class="wrapper-clients">
-              <div>
+              <div
+                class="client-slider"
+                tabindex="-1"
+                @mouseover="pause()"
+                @mouseout="play()"
+              >
                 <h1>What Our Clients Say</h1>
-                <img :src="clientsList[activeClient].img" />
-                <p>{{clientsList[activeClient].text}}</p>
-                <p>
-                  {{clientsList[activeClient].name}},
-                  <span> {{clientsList[activeClient].agency}}</span>
-                </p>
+                <transition name="fade">
+                  <img v-if="show" :src="clientsList[activeClient].img" />
+                </transition>
+                <transition name="fade">
+                  <p v-if="show">{{clientsList[activeClient].text}}</p>
+                </transition>
+                <transition name="fade">
+                  <p v-if="show">
+                    {{clientsList[activeClient].name}},
+                    <span> {{clientsList[activeClient].agency}}</span>
+                  </p>
+                </transition>
                 <i
                   class="far fa-circle"
                   :class="{fas: activeClient === index }"
