@@ -90,7 +90,7 @@ new Vue({
     changeClient(direction, changedByAI) {
       this.activeClient = this.activeClient + direction;
 
-      if (this.activeClient > 1) {
+      if (this.activeClient > this.clientsList.length - 1) {
         this.activeClient = 0;
       }
     },
