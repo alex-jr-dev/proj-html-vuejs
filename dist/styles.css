@@ -529,9 +529,15 @@ header .campaigns div .button:last-of-type:hover {
   color: #5a5759;
   font-size: 16px;
   margin-right: 12px;
+  transition: transform 0.3s;
 }
 .footer .wrapper-footer div i:hover {
   cursor: pointer;
+  transition: transform 0.3s;
+  transform: perspective(800px) translateZ(100px);
+}
+.footer .wrapper-footer div i:active {
+  transform: perspective(800px) translateZ(0);
 }
 .footer .chevron {
   background-color: #5a5759;

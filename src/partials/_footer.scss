@@ -62,9 +62,16 @@
         color: $money_dark_grey;
         font-size: $font_size + 2px;
         margin-right: $spacing - 8px;
+        transition: transform 0.3s;
 
         &:hover {
           cursor: pointer;
+          transition: transform 0.3s;
+          transform: perspective(800px) translateZ(100px);
+        }
+
+        &:active {
+          transform: perspective(800px) translateZ(0);
         }
       }
     }
